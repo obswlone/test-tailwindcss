@@ -1,47 +1,38 @@
 @import "tailwindcss";
 
-
 :root {
- 
-  --black: 38 50 56;       /* #263238 */
-  --dark-grey: 77 77 77;   /* #4D4D4D */
-  --grey: 113 113 113;     /* #717171 */
+  --black: 38 50 56; /* #263238 */
+  --dark-grey: 77 77 77; /* #4D4D4D */
+  --grey: 113 113 113; /* #717171 */
   --light-grey: 137 147 158; /* #89939E */
   --grey-blue: 171 189 209; /* #ABBED1 */
-  --silver: 245 247 250;   /* #F5F7FA */
-  --white: 255 255 255;    /* #FFFFFF */
+  --silver: 245 247 250; /* #F5F7FA */
+  --white: 255 255 255; /* #FFFFFF */
 
- 
-  --primary: 40 203 139;   /* #28CB8B */
-  --secondary: 38 50 56;   /* #263238 */
-  --info: 33 148 243;      /* #2194F3 */
+  --primary: 76 175 79; /* #4CAF4F */
+  --secondary: 38 50 56; /* #263238 */
+  --info: 33 148 243; /* #2194F3 */
 
-  
-  --primary-1: 67 160 70;  /* #43A046 */
-  --primary-2: 56 142 59;  /* #388E3B */
-  --primary-3: 35 125 49;  /* #237D31 */
-  --primary-4: 27 94 31;   /* #1B5E1F */
-  --primary-5: 16 62 19;   /* #103E13 */
+  --primary-1: 67 160 70; /* #43A046 */
+  --primary-2: 56 142 59; /* #388E3B */
+  --primary-3: 35 125 49; /* #237D31 */
+  --primary-4: 27 94 31; /* #1B5E1F */
+  --primary-5: 16 62 19; /* #103E13 */
 
-  
   --primary-tint-1: 102 187 105; /* #66BB69 */
   --primary-tint-2: 129 199 132; /* #81C784 */
   --primary-tint-3: 165 214 167; /* #A5D6A7 */
   --primary-tint-4: 200 230 201; /* #C8E6C9 */
   --primary-tint-5: 232 245 233; /* #E8F5E9 */
 
+  --warning: 251 192 45; /* #FBC02D */
+  --error: 229 56 53; /* #E53835 */
+  --success: 46 125 49; /* #2E7D31 */
 
-  --warning: 251 192 45;   /* #FBC02D */
-  --error: 229 56 53;      /* #E53835 */
-  --success: 46 125 49;    /* #2E7D31 */
-
-  
-  --font-sans: "Inter", sans-serif; 
+  --font-sans: "Inter", sans-serif;
 }
 
-
 @theme {
-  
   --color-black: rgb(var(--black));
   --color-dark: rgb(var(--dark-grey));
   --color-grey: rgb(var(--grey));
@@ -53,7 +44,6 @@
   --color-primary: rgb(var(--primary));
   --color-secondary: rgb(var(--secondary));
   --color-info: rgb(var(--info));
-
 
   --color-primary-shade-1: rgb(var(--primary-1));
   --color-primary-shade-2: rgb(var(--primary-2));
@@ -71,33 +61,47 @@
   --color-error: rgb(var(--error));
   --color-success: rgb(var(--success));
 
-
   --font-sans: var(--font-sans);
 }
 
-
 @layer base {
-
-  h1, .text-h1 {
+  h1,
+  .text-h1 {
     @apply text-[64px] leading-[76px] font-semibold;
   }
-  h2, .text-h2 {
+  h2,
+  .text-h2 {
     @apply text-[36px] leading-[44px] font-semibold;
   }
-  h3, .text-h3 {
+  h3,
+  .text-h3 {
     @apply text-[28px] leading-[36px] font-semibold;
   }
-  h4, .text-h4 {
+  h4,
+  .text-h4 {
     @apply text-[20px] leading-[28px] font-semibold;
   }
 
+  .body-1 {
+    @apply text-[18px] leading-[28px];
+  }
+  .body-2 {
+    @apply text-[16px] leading-[24px];
+  }
+  .body-3 {
+    @apply text-[14px] leading-[20px];
+  }
+  .body-4 {
+    @apply text-[12px] leading-[16px];
+  }
 
-  .body-1 { @apply text-[18px] leading-[28px]; }
-  .body-2 { @apply text-[16px] leading-[24px]; }
-  .body-3 { @apply text-[14px] leading-[20px]; }
-  .body-4 { @apply text-[12px] leading-[16px]; }
-
-  .font-regular { font-weight: 400; }
-  .font-medium { font-weight: 500; }
-  .font-semibold { font-weight: 600; }
+  .font-regular {
+    font-weight: 400;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
 }

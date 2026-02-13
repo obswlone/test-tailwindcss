@@ -4,83 +4,29 @@ import { Card } from "@/components/Card";
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
+import { BODYPARTS } from "@/data/bodyparts";
+import { BodyPart } from "@/components/BodyPart";
+import { BLOG_CARDS } from "@/data/blogcards";
+import { BlogCard } from "@/components/BlogCard";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
+  const firstPart = BODYPARTS.find((item) => item.id === "1");
+  const secondPart = BODYPARTS.find((item) => item.id === "2");
   return (
     <>
-      <nav className="flex bg-silver h-20 items-center justify-between px-8 lg:px-24">
-        <Image src="/nexcent.svg" alt="Nexcent Logo" width={155} height={24} />
-
-        <ul className="flex items-center gap-12 font-medium">
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              Feature
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              Product
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              Testimonial
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-black hover:text-primary transition-colors"
-            >
-              FAQ
-            </a>
-          </li>
-        </ul>
-
-        <div className="flex items-center">
-          <button className="text-primary px-5 py-2 hover:bg-black/5 rounded-md transition-all">
-            Login
-          </button>
-          <button className="bg-primary text-white px-5 py-2 rounded-md hover:bg-primary-shade-1 transition-all">
-            Sign up
-          </button>
-        </div>
-      </nav>
-
+    <Container>
+      <Navbar />
       <HeroSlider />
-
+</Container>
       <Container>
-        <div className="flex flex-col items-center justify-between">
-          <h2 className="font-semibold text-dark-grey">Our Clients</h2>
-          <h4 className="text-grey/50 font-regular">
+        <div className="flex flex-col items-center justify-center gap-4 text-center max-w-4xl mx-auto px-4">
+          <h2 className="text-dark">Our Clients</h2>
+          <p className="text-grey body-2 font-regular max-w-2xl">
             We have been working with some Fortune 500+ clients
-          </h4>
-          <div className="flex gap-40 mt-3.5 ">
+          </p>
+          <div className="flex flex-wrap justify-center gap-20 mt-8">
+
             <Image src="/logo2.svg" alt="" width={48} height={48} />
             <Image src="/logo1.svg" alt="" width={48} height={48} />
             <Image src="/logo3.svg" alt="" width={48} height={48} />
@@ -92,21 +38,51 @@ export default function Home() {
         </div>
       </Container>
       <Container>
-        <div className="flex flex-col items-center justify-between ">
-          <h2 className="font-semibold text-center text-dark-grey">
+        <div className="flex flex-col items-center justify-center gap-4 text-center max-w-4xl mx-auto px-4">
+          <h2 className="text-dark">
             Manage your entire community <br /> in a single system
           </h2>
-          <h4 className="text-grey/50 font-regular">
+          <p className="text-grey font-regular body-2">
             Who is Nextcent suitable for?
-          </h4>
+          </p>
         </div>
 
-        <div className="flex gap-6 justify-center">
+        <div className="grid gap-8 justify-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12">
           {CARDS.map((card, index) => (
             <Card key={index} {...card} />
           ))}
         </div>
       </Container>
+      {firstPart && (
+        <Container>
+          <BodyPart {...firstPart} />
+        </Container>
+      )}
+
+      {secondPart && (
+        <Container>
+          <BodyPart {...secondPart} />
+        </Container>
+      )}
+<Container>
+      <div className="flex flex-col items-center justify-center gap-4 text-center max-w-4xl mx-auto px-4">
+        <h2 className="text-dark ">
+          Caring is the new marketing
+        </h2>
+        <p className="text-grey body-2 font-regular max-w-2xl">
+          The Nexcent blog is the best place to read about the latest membership
+          insights, trends and more. See whos joining the community, read about
+          how our community are increasing their membership income and lots
+          more.​
+        </p>
+      </div>
+      <div className="flex justify-center gap-8 py-20 flex-wrap">
+        {BLOG_CARDS.map((card) => (
+          <BlogCard key={card.id} {...card} />
+        ))}
+      </div>
+      </Container>
+      
       <Footer />
     </>
   );

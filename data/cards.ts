@@ -14,7 +14,7 @@ export const CARDS: CardType[] = [
       "Our membership management software provides full automation of membership renewals and payments",
   },
   {
-    title: "Clubs And Groups",
+    title: "Clubs And\nGroups",
     img: "/cardimg3.svg",
     maintext:
       "Our membership management software provides full automation of membership renewals and payments",

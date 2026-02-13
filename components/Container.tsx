@@ -1,5 +1,7 @@
-import { ReactNode } from "react";
-
-export function Container({children}:{children:ReactNode}){
-    return <div className="mt-15 mb-15">{children}</div>
+export function Container({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="max-w-360 mx-auto  mb-8">
+      {children}
+    </div>
+  );
 }
