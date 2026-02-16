@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Card({ img, title, maintext }: CardType) {
   return (
     <div className="
-      w-full max-w-74.75 h-65
+      w-full max-w-74.75 min-h-65
       p-6 rounded-xl bg-white shadow-md
       flex flex-col justify-between
       transition-all duration-300

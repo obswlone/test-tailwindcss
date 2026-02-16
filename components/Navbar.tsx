@@ -8,11 +8,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-silver">
-      <div className="flex h-20 items-center justify-between px-6 lg:px-24">
+    <nav className="bg-silver sticky top-0 z-50 w-full ">
+      <div className="flex h-21 items-center justify-between px-6 xl:px-24 max-w-360 mx-auto">
         <Image src="/nexcent.svg" alt="Nexcent Logo" width={155} height={24} />
 
-        <ul className="hidden lg:flex items-center gap-12 font-medium">
+        <ul className="hidden lg:flex items-center gap-12.5 font-regular body-2">
           {["Home", "Service", "Feature", "Product", "Testimonial", "FAQ"].map(
             (item) => (
               <li key={item}>
@@ -42,7 +42,7 @@ export function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden flex flex-col items-center gap-6 pb-6 bg-silver">
+        <div className="lg:hidden flex flex-col items-center gap-6 pb-6 bg-silver ">
           {["Home", "Service", "Feature", "Product", "Testimonial", "FAQ"].map(
             (item) => (
               <a key={item} href="#" className="hover:text-primary">
