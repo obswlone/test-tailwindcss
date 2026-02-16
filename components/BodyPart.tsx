@@ -4,21 +4,11 @@ import { Button } from "@/components/Button";
 
 export function BodyPart({ img, title, maintext }: BodyPartType) {
   return (
-  
     <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16 py-12 lg:py-16 px-4 md:px-20 lg:px-36">
-      
-     
       <div className="relative w-full max-w-110.5 h-75 md:h-100 lg:h-108.25">
-        <Image 
-          src={img} 
-          alt={title} 
-          fill 
-          className="object-contain" 
-          priority 
-        />
+        <Image src={img} alt={title} fill className="object-contain" priority />
       </div>
 
-     
       <div className="flex flex-col gap-6 max-w-150 text-center lg:text-left">
         <h2 className="text-dark font-sans text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight">
           {title}

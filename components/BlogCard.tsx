@@ -5,11 +5,11 @@ import { BlogCardType } from "@/types/blogcard";
 export function BlogCard({ title, image, link }: BlogCardType) {
   return (
     <div className="relative w-full max-w-92 h-71.5 mb-24 lg:mb-0">
-      <Image 
-        src={image} 
-        alt={title} 
-        width={368} 
-        height={286} 
+      <Image
+        src={image}
+        alt={title}
+        width={368}
+        height={286}
         className="rounded-xl object-cover w-full h-full"
       />
 

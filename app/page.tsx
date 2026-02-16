@@ -15,10 +15,9 @@ export default function Home() {
   const secondPart = BODYPARTS.find((item) => item.id === "2");
   return (
     <>
-      
-        <Navbar />
-        <HeroSlider />
-     
+      <Navbar />
+      <HeroSlider />
+
       <Container>
         <div className="flex flex-col items-center justify-center py-10">
           <div className="text-center px-4 mb-8">

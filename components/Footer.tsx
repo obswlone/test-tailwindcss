@@ -97,7 +97,9 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-4 max-w-xs w-full">
-            <label className="text-[20px] leading-7 font-semibold">Stay up to date</label>
+            <label className="text-[20px] leading-7 font-semibold">
+              Stay up to date
+            </label>
             <div className="relative">
               <input
                 type="email"
