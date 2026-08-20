@@ -9,10 +9,16 @@ export function Navbar() {
 
   return (
     <nav className="bg-silver sticky top-0 z-50 w-full ">
-      <div className="flex h-21 items-center justify-between px-6 xl:px-24 max-w-360 mx-auto">
-        <Image src="/nexcent.svg" alt="Nexcent Logo" width={155} height={24} />
+      <div className="flex h-21 items-center justify-between gap-4 px-4 md:px-6 xl:px-24 max-w-360 mx-auto">
+        <Image
+          src="/nexcent.svg"
+          alt="Nexcent Logo"
+          width={155}
+          height={24}
+          className="shrink-0"
+        />
 
-        <ul className="hidden lg:flex items-center gap-12.5 font-regular body-2">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-12.5 font-regular body-2">
           {["Home", "Service", "Feature", "Product", "Testimonial", "FAQ"].map(
             (item) => (
               <li key={item}>

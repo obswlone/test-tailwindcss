@@ -28,7 +28,7 @@ export default function Home() {
           </div>
 
           <div className="w-full px-4 md:px-20 lg:px-36">
-            <div className="flex flex-wrap justify-between items-center gap-8 md:gap-12 lg:gap-20">
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
               <Image src="/logo2.svg" alt="Client 1" width={48} height={48} />
               <Image src="/logo1.svg" alt="Client 2" width={48} height={48} />
               <Image src="/logo3.svg" alt="Client 3" width={48} height={48} />
@@ -50,7 +50,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-8 mt-12 px-4 md:px-20 lg:flex-row lg:justify-between lg:px-36">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 px-4 md:px-10 lg:px-12 xl:px-36 justify-items-center">
           {CARDS.map((card, index) => (
             <Card key={index} {...card} />
           ))}
@@ -77,7 +77,7 @@ export default function Home() {
             membership income and lots more.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center lg:justify-between gap-y-28 py-20 px-4 md:px-20 lg:px-36">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 xl:gap-x-8 gap-y-16 pt-12 pb-20 px-4 md:px-10 lg:px-12 xl:px-36">
           {BLOG_CARDS.map((card) => (
             <BlogCard key={card.id} {...card} />
           ))}
